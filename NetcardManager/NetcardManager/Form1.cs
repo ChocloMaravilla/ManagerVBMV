@@ -32,7 +32,9 @@ namespace NetcardManager
         }
         public void Function()
         {
+            MessageBox.Show("Bienvenido a mi Manager de Maquinas Virtuales espero lo disfrutes", "Welcome");
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             label6.Text = Environment.UserName.ToString();
             label10.Text = Dns.GetHostName().ToString();
             NetworkInterface[] Ifaces = NetworkInterface.GetAllNetworkInterfaces();

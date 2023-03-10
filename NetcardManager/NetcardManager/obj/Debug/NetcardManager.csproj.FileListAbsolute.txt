@@ -13,7 +13,6 @@ C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManag
 C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\bin\Debug\NetcardManager.exe
 C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\bin\Debug\NetcardManager.pdb
 C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.csproj.AssemblyReference.cache
-C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.csproj.SuggestedBindingRedirects.cache
 C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.Form1.resources
 C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.Properties.Resources.resources
 C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.csproj.GenerateResource.cache
@@ -34,3 +33,6 @@ C:\Proyectos\VSCommunity\C#\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\
 C:\Proyectos\VSCommunity\C#\ManagerVBMV\NetcardManager\NetcardManager\bin\Debug\Microsoft.WindowsAPICodePack.dll
 C:\Proyectos\VSCommunity\C#\ManagerVBMV\NetcardManager\NetcardManager\bin\Debug\Microsoft.WindowsAPICodePack.xml
 C:\Proyectos\VSCommunity\C#\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.csproj.CopyComplete
+C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\rusky\Desktop\Proyectos\C#\Joan\NetcardManager\ManagerVBMV\NetcardManager\NetcardManager\obj\Debug\NetcardManager.csproj.CopyComplete

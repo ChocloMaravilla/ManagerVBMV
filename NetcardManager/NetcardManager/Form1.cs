@@ -12,6 +12,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace NetcardManager
 {
@@ -81,12 +82,39 @@ namespace NetcardManager
                         if (UIPAdres.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                         {
                             PingReply pings = new Ping().Send("www.Google.com", 20);
-                            if (pings.Status == IPStatus.Success) { label15.Text = "Conection"; label15.BackColor = Color.GreenYellow; }
+                            if (pings.Status == IPStatus.Success) { label15.Text = "Connected"; label15.BackColor = Color.GreenYellow; }
                             label1.Text = UIPAdres.Address.ToString();
                             label21.Text = item.GetPhysicalAddress().ToString();
                         }
                     }
+                 VirtualBoxFunction();
                 }
+            }
+
+        }
+        public void VirtualBoxFunction()
+        {
+            string VBoxPath = Path.Combine("A:\\WorkSpace\\VirtualBox", "VirtualBox.exe");
+
+            bool isInstalled = File.Exists(VBoxPath);
+
+            if (isInstalled)
+            {
+                label23.Text = "Installed";
+                label23.BackColor = Color.GreenYellow;
+            }
+            else
+            {
+                label23.Text = "Not Installed";
+                label23.BackColor = Color.IndianRed;
+            }
+
+            string virtualBoxPath = Path.Combine("A:\\WorkSpace\\VirtualBox", "VirtualBox.exe");
+
+            if (File.Exists(virtualBoxPath))
+            {
+                string version = System.Diagnostics.FileVersionInfo.GetVersionInfo(virtualBoxPath).ProductVersion;
+                label14.Text = version;
             }
         }
     }

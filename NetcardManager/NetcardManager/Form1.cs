@@ -1,5 +1,7 @@
 ﻿using System;
+using Microsoft.WindowsAPICodePack.Net;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -34,16 +36,34 @@ namespace NetcardManager
         {
             MessageBox.Show("Bienvenido a mi Manager de Maquinas Virtuales espero lo disfrutes", "Welcome");
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
+            
             label6.Text = Environment.UserName.ToString();
             label10.Text = Dns.GetHostName().ToString();
             NetworkInterface[] Ifaces = NetworkInterface.GetAllNetworkInterfaces();
             foreach (NetworkInterface item in Ifaces)
             { 
                 if (item.NetworkInterfaceType.Equals(NetworkInterfaceType.Ethernet) && item.OperationalStatus.Equals(OperationalStatus.Up) && item.Name.Equals("Ethernet") || item.NetworkInterfaceType.Equals(NetworkInterfaceType.Wireless80211) && item.OperationalStatus.Equals(OperationalStatus.Up) && item.Name.Equals("Wi-Fi"))
-                { 
-                    //Console.WriteLine("Funciona");
-                    IPInterfaceProperties IPIProp = item.GetIPProperties();
+                {
+                    var NLManager = NetworkListManager.GetNetworks(NetworkConnectivityLevels.Connected);
+                    foreach (var NL in NLManager)
+                    {
+                        if (NL == null)
+                        {
+                            label5.Text = "Not Connected";
+                            label9.BackColor = Color.DarkRed;
+                        }
+                        PingReply e = new Ping().Send("www.Google.com", 20);
+                        if (e.Status == IPStatus.Success)
+                        {
+                            label5.Text = NL.Name;
+                            label9.Text = "Connected";
+                            label9.BackColor = Color.GreenYellow;
+                        }
+                    }
+
+                        IPInterfaceProperties IPIProp = item.GetIPProperties();
                     GatewayIPAddressInformationCollection GIPAICollection = IPIProp.GatewayAddresses;
                     if (GIPAICollection != null || GIPAICollection.Count > 0)
                     {
